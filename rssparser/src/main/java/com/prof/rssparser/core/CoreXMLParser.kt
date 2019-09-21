@@ -87,8 +87,13 @@ object CoreXMLParser {
 						if (type != null && type.contains("audio/")) {
 							currentArticle.audio = xmlPullParser.getAttributeValue(null, RSSKeywords.RSS_ITEM_URL)
 							currentArticle.filesize = xmlPullParser.getAttributeValue(null, RSSKeywords.RSS_ITEM_LENGTH)
-							currentArticle.length = xmlPullParser.getAttributeValue(null, RSSKeywords.RSS_ITEM_DURATION)
 						}
+                    }
+					
+				} else if (xmlPullParser.name.equals(RSSKeywords.RSS_ITEM_DURATION, ignoreCase = true)) {
+                    if (insideItem) {
+                        val length = xmlPullParser.nextText()
+                        currentArticle.length = length
                     }
 
                 } else if (xmlPullParser.name.equals(RSSKeywords.RSS_ITEM_DESCRIPTION, ignoreCase = true)) {
