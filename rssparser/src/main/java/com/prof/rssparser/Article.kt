@@ -26,8 +26,9 @@ data class Article(
         var description: String? = null,
         var content: String? = null,
         var image: String? = null,
-		var length: String? = null,
+		var filesize: String? = null,
 		var audio: String? = null,
+		var length: String? = null,
         private var _categories: MutableList<String> = mutableListOf()
 ) {
 

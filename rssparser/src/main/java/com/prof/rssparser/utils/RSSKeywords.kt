@@ -34,4 +34,5 @@ object RSSKeywords {
     const val RSS_ITEM_TYPE = "type"
     const val RSS_ITEM_GUID = "guid"
 	const val RSS_ITEM_LENGTH = "length"
+	const val RSS_ITEM_DURATION = "itunes:duration"
 }

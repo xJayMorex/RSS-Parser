@@ -86,7 +86,8 @@ object CoreXMLParser {
                         }
 						if (type != null && type.contains("audio/")) {
 							currentArticle.audio = xmlPullParser.getAttributeValue(null, RSSKeywords.RSS_ITEM_URL)
-							currentArticle.length = xmlPullParser.getAttributeValue(null, RSSKeywords.RSS_ITEM_LENGTH)
+							currentArticle.filesize = xmlPullParser.getAttributeValue(null, RSSKeywords.RSS_ITEM_LENGTH)
+							currentArticle.length = xmlPullParser.getAttributeValue(null, RSSKeywords.RSS_ITEM_DURATION)
 						}
                     }
 
